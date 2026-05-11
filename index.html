@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeCare - Student Health & Life Management</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+        <div class="login-container">
+            <div class="login-box">
+                <h1>Login to LifeCare</h1>
+                <p class="login-tagline">Stay healthy. Stay organized. Stay prepared. Stay in control.</p>
+                
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select id="role" required>
+                            <option value="">Select your role</option>
+                            <option value="Nursing Student">Nursing Student</option>
+                            <option value="Student">Student</option>
+                            <option value="Professional">Professional</option>
+                        </select>
+                    </div>
+                    
+                    <div id="errorMessage" class="error-message"></div>
+                    
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                
+                <p class="demo-credentials">
+                    <strong>Demo Credentials:</strong><br>
+                    Email: student@lifecare.com | Password: password123<br>
+                    Email: nurse@lifecare.com | Password: password123<br>
+                    Email: prof@lifecare.com | Password: password123
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">LifeCare</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-page="homePage">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="featuresPage">Features</a></li>
+                    <li><a href="#" class="nav-link" data-page="aboutPage">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="contactPage">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>LifeCare</h1>
+                <p class="tagline">Stay healthy. Stay organized. Stay prepared. Stay in control.</p>
+                <button class="cta-btn" onclick="goToLogin()">Get Started</button>
+            </div>
+        </section>
+
+        <!-- What is LifeCare Section -->
+        <section class="what-is-lifecare">
+            <div class="container">
+                <h2>What is LifeCare?</h2>
+                <p>LifeCare is an all-in-one student companion that helps students organize their schedules, track their health, manage stress, and stay productive every day.</p>
+            </div>
+        </section>
+
+        <!-- Core Features Section -->
+        <section class="core-features">
+            <div class="container">
+                <h2>Core Features of LifeCare</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Smart Academic Planner</h3>
+                        <p>Organize your class and clinical schedules, track tasks and assignments, set deadline reminders, keep an eye on examination countdowns, and manage your workload with priority-based to-do lists.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Health and Wellness Monitoring</h3>
+                        <p>Track your water intake, monitor your sleep patterns, set medication reminders, log your meals and nutrition, and stay active with physical activity tracking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Mental Health and Stress Support</h3>
+                        <p>Track your mood, check your stress levels, practice guided breathing and relaxation exercises, get motivational support and wellness tips, and reflect on your day with a journaling feature.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Daily Life Management Tools</h3>
+                        <p>Stay on track with a habit tracker, manage your budget and expenses, keep personal notes and to-do lists, and store emergency contacts and quick-access resources.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Student Support System</h3>
+                        <p>Connect with peer support through the community feature, receive academic encouragement, get self-care recommendations based on stress levels, and use personalized reminders and productivity insights to optimize your day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Features Page -->
+    <div id="featuresPage" class="page">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">LifeCare</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-page="homePage">Home</a></li>
+                    <li><a href="#" class="nav-link active" data-page="featuresPage">Features</a></li>
+                    <li><a href="#" class="nav-link" data-page="aboutPage">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="contactPage">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>Features</h1>
+            <div class="features-detail">
+                <h2>1. Smart Academic Planner</h2>
+                <ul>
+                    <li>✓ Class and clinical schedule organizer</li>
+                    <li>✓ Task and assignment tracker</li>
+                    <li>✓ Deadline reminders</li>
+                    <li>✓ Examination countdowns</li>
+                    <li>✓ Priority-based to-do lists</li>
+                </ul>
+
+                <h2>2. Health and Wellness Monitoring</h2>
+                <ul>
+                    <li>✓ Water intake tracker</li>
+                    <li>✓ Sleep monitoring</li>
+                    <li>✓ Medication reminders</li>
+                    <li>✓ Meal and nutrition logs</li>
+                    <li>✓ Physical activity tracking</li>
+                </ul>
+
+                <h2>3. Mental Health and Stress Support</h2>
+                <ul>
+                    <li>✓ Mood tracker</li>
+                    <li>✓ Stress level check-ins</li>
+                    <li>✓ Guided breathing and relaxation exercises</li>
+                    <li>✓ Motivational support and wellness tips</li>
+                    <li>✓ Journaling feature</li>
+                </ul>
+
+                <h2>4. Daily Life Management Tools</h2>
+                <ul>
+                    <li>✓ Habit tracker</li>
+                    <li>✓ Budget and expense tracker</li>
+                    <li>✓ Personal notes and checklist organizer</li>
+                    <li>✓ Emergency contacts and quick-access resources</li>
+                </ul>
+
+                <h2>5. Student Support System</h2>
+                <ul>
+                    <li>✓ Peer support/community feature</li>
+                    <li>✓ Academic encouragement tools</li>
+                    <li>✓ Self-care recommendations based on stress indicators</li>
+                    <li>✓ Personalized reminders and productivity insights</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="aboutPage" class="page">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">LifeCare</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-page="homePage">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="featuresPage">Features</a></li>
+                    <li><a href="#" class="nav-link active" data-page="aboutPage">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="contactPage">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>About LifeCare</h1>
+            <div class="about-content">
+                <h2>What is LifeCare?</h2>
+                <p>LifeCare: A Student Health & Life Management Companion is a comprehensive mobile application designed to help students manage their academic responsibilities, health, wellness, and daily routines in one place. Targeted particularly at nursing students and those in demanding academic programs, LifeCare provides tools to organize tasks, track health, monitor mental well-being, and offer emotional support. With its integrated platform, LifeCare empowers students to balance academic excellence with personal well-being.</p>
+
+                <h2>Mission</h2>
+                <p>Our mission is to empower students to succeed academically, emotionally, and physically with LifeCare, an all-in-one digital companion. It helps students manage their academic workload, track physical and mental health, and maintain a balanced lifestyle through task management, wellness monitoring, emotional support, and self-care recommendations. Our goal is to enhance productivity, well-being, and academic success.</p>
+
+                <h2>Vision</h2>
+                <p>We envision a future where students can effortlessly balance academic responsibilities, health, and personal life. LifeCare aims to be the leading tool that helps students manage tasks, prioritize self-care, and achieve their goals. Our vision is to build a community of students who are mentally healthy, physically active, and academically successful by providing the tools needed for success in both their studies and personal lives.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contactPage" class="page">
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="logo">LifeCare</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link" data-page="homePage">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="featuresPage">Features</a></li>
+                    <li><a href="#" class="nav-link" data-page="aboutPage">About</a></li>
+                    <li><a href="#" class="nav-link active" data-page="contactPage">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:lifecare000222@gmail.com">lifecare000222@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <p><a href="tel:09063088746">09063088746</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Location</h3>
+                    <p>Quezon City, Philippines</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+        <div class="dashboard-container">
+            <nav class="sidebar">
+                <ul class="sidebar-links">
+                    <li><a href="#" class="sidebar-link active" data-section="overview">Dashboard</a></li>
+                    <li><a href="#" class="sidebar-link" data-section="academic">Smart Academic Planner</a></li>
+                    <li><a href="#" class="sidebar-link" data-section="health">Health & Wellness</a></li>
+                    <li><a href="#" class="sidebar-link" data-section="mental">Mental Health</a></li>
+                    <li><a href="#" class="sidebar-link" data-section="daily">Daily Life Management</a></li>
+                    <li><a href="#" class="sidebar-link" data-section="student">Student Support</a></li>
+                    <li><a href="#" class="sidebar-link" data-section="profile">Profile</a></li>
+                    <li><a href="#" class="sidebar-link logout-link" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+
+            <div class="main-content">
+                <header class="dashboard-header">
+                    <div class="header-left">
+                        <h1>Dashboard</h1>
+                    </div>
+                    <div class="header-right">
+                        <span id="userGreeting" class="user-greeting">Hi, User</span>
+                        <span id="userRole" class="user-role">Role: Student</span>
+                        <a href="#" class="profile-link" data-section="profile" onclick="event.preventDefault(); navigateSection('profile')">Profile</a>
+                    </div>
+                </header>
+
+                <!-- Overview Section -->
+                <section id="overviewSection" class="dashboard-section active">
+                    <h2>Welcome to Your Dashboard</h2>
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card" onclick="openModal('academic')">
+                            <h3> Smart Academic Planner</h3>
+                            <p id="academicSummary" class="card-summary">0 tasks | 0 exams</p>
+                            <p class="card-hint">Click to view details</p>
+                        </div>
+                        <div class="dashboard-card" onclick="openModal('health')">
+                            <h3> Health & Wellness</h3>
+                            <p id="healthSummary" class="card-summary">Water: 0ml | Sleep: 0hr | Activity: 0min</p>
+                            <p class="card-hint">Click to view details</p>
+                        </div>
+                        <div class="dashboard-card" onclick="openModal('mental')">
+                            <h3> Mental Health</h3>
+                            <p id="mentalSummary" class="card-summary">Mood: Not logged | Stress: N/A</p>
+                            <p class="card-hint">Click to view details</p>
+                        </div>
+                        <div class="dashboard-card" onclick="openModal('daily')">
+                            <h3> Daily Life Management</h3>
+                            <p id="dailySummary" class="card-summary">Budget: $0 | Spent: $0</p>
+                            <p class="card-hint">Click to view details</p>
+                        </div>
+                        <div class="dashboard-card" onclick="openModal('duties')">
+                            <h3> Scheduled Duties</h3>
+                            <p id="dutiesSummary" class="card-summary">0 upcoming duties</p>
+                            <p class="card-hint">Click to view details</p>
+                        </div>
+                        <div class="dashboard-card" onclick="openModal('student')">
+                            <h3> Student Support</h3>
+                            <p id="studentSummary" class="card-summary">Support & Motivation</p>
+                            <p class="card-hint">Click to view details</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Profile Section -->
+                <section id="profileSection" class="dashboard-section">
+                    <h2>My Profile</h2>
+                    <div class="profile-form">
+                        <div class="form-group">
+                            <label for="profileName">Nickname</label>
+                            <input type="text" id="profileName" placeholder="Enter your nickname">
+                        </div>
+                        <div class="form-group">
+                            <label for="profileEmail">Email</label>
+                            <input type="email" id="profileEmail" placeholder="Your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="profileRole">Role</label>
+                            <input type="text" id="profileRole" disabled>
+                        </div>
+                        <button class="save-btn" onclick="saveProfile()">Save Changes</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Motivational Quote Modal -->
+    <div id="quoteModal" class="modal">
+        <div class="modal-content quote-modal-content">
+            <span class="modal-close" onclick="closeQuoteModal()">&times;</span>
+            <h2> Motivational Quote</h2>
+            <p id="quoteText" class="quote-text"></p>
+            <button class="modal-btn" onclick="getNewQuote()">Get Another Quote</button>
+            <button class="modal-btn" onclick="closeQuoteModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
